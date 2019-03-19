@@ -73,7 +73,7 @@ pipeline {
     stage('DT Deploy Event') {
       when {
         expression {
-          return env.BRANCH_NAME ==~ 'release/.*' || env.BRANCH_NAME ==~'master'
+        return env.BRANCH_NAME ==~ 'release/.*' || env.BRANCH_NAME ==~'master'
         }
       }
       steps {
@@ -81,7 +81,7 @@ pipeline {
           script {
             def status = pushDynatraceDeploymentEvent (
               tagRule : tagMatchRules,
-              customerProperties : [
+              customProperties : [
                 [key: 'Jenkins Build Number', value : "${env.BUILD_ID}"],
                 [key: 'Git commit', value: "${env.GIT_COMMIT}"]
               ]
