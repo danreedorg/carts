@@ -95,7 +95,7 @@ if(LTN == null) LTN = &quot;NoTestName&quot;;
 String LSN = (bsh.args.length &gt; 0) ? bsh.args[0] : &quot;Test Scenario&quot;;
 String TSN = sampler.getName();
 String VU = ctx.getThreadGroup().getName() + ctx.getThreadNum();
-String headerValue = &quot;LSN + &quot;;TSN=&quot;;+ TSN + &quot;;LTN=&quot; + LTN + &quot;;VU=&quot;; + VU + &quot;;&quot;;
+String headerValue = &quot;LSN=&quot;;+ LSN + &quot;;TSN=&quot;;+ TSN + &quot;;LTN=&quot; + LTN + &quot;;VU=&quot;; + VU + &quot;;&quot;;
             
 // -------------------------------------------
 // Set header
